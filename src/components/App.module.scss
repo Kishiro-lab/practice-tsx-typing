@@ -1,0 +1,24 @@
+@use "sass:color";
+
+$primary-color: #ffffff;
+$secondary-color: #ffffff;
+$tertiary-color: #ffffff;
+$quaternary-color: #ffffff;
+
+@mixin limited-width($min: 200px, $max: 400px) {
+  min-width: $min;
+  max-width: $max;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  margin: 16px auto 0;
+  @include limited-width();
+  height: 400px;
+  background-color: pink;
+  border-radius: 8px;
+  h1 {
+    color: color.change(red, $lightness: 30%);
+  }
+}
