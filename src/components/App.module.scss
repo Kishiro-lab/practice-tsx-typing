@@ -16,7 +16,7 @@ $quaternary-color: #ffffff;
   margin: 16px auto 0;
   @include limited-width();
   height: 400px;
-  background-color: pink;
+  background: pink url(../images/favicon2.png) center;
   border-radius: 8px;
   h1 {
     color: color.change(red, $lightness: 30%);

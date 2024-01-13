@@ -1,8 +1,8 @@
 {
-  "name": "dotinstall-react-introduction",
+  "name": "template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
@@ -15,9 +15,9 @@
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.7",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
-    "style-loader": "^3.3.3",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
