@@ -15,7 +15,6 @@ module.exports = {
   // メインとなるJavaScriptファイル（エントリーポイント）
   entry: "./src/main.tsx",
   // ファイルの出力設定
-  // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
     path: `${__dirname}/docs`,
@@ -58,6 +57,18 @@ module.exports = {
               // 1 => postcss-loader;
               // 2 => postcss-loader, sass-loader
               importLoaders: 2,
+            },
+          },
+          // PostCSSのための設定
+          {
+            loader: "postcss-loader",
+            options: {
+              // PostCSS側でもソースマップを有効にする
+              sourceMap: enabledSourceMap,
+              postcssOptions: {
+                // ベンダープレフィックスを自動付与する
+                plugins: ["autoprefixer"],
+              },
             },
           },
           // Sassをバンドルするための機能
