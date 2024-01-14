@@ -15,11 +15,16 @@ module.exports = {
   // メインとなるJavaScriptファイル（エントリーポイント）
   entry: "./src/main.tsx",
   // ファイルの出力設定
+  // ファイルの出力設定
   output: {
     //  出力ファイルのディレクトリ名
     path: `${__dirname}/docs`,
     // 出力ファイル名
     filename: "main.js",
+    // assetの出力ファイル名
+    // defaultName: "images/[hash][ext][query]"
+    // name:ファイル名 hash:ハッシュ値 ext:拡張子 query:クエリ文字列
+    assetModuleFilename: "images/[name][ext]",
   },
   devServer: {
     static: {
@@ -67,13 +72,13 @@ module.exports = {
       },
       {
         // 対象となるファイルの拡張子
-        test: /\.(gif|png|jpg|svg)$/,
-        // 閾値以上だったら埋め込まずファイルとして分離する
+        test: /\.(gif|png|jpg|eot|wof|woff|ttf|svg)$/,
+        // 閾値以上だったら埋め込まず任意ファイル名で分離
         type: "asset",
         parser: {
           dataUrlCondition: {
-            // 128KB以上だったら埋め込まずファイルとして分離する
-            maxSize: 128 * 1024,
+            // 閾値の調整(8KB)
+            maxSize: 8 * 1024,
           },
         },
       },
