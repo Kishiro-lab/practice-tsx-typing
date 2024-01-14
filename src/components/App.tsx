@@ -1,10 +1,15 @@
-import styles from "./App.module.scss";
+import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
+import { Stack } from "react-bootstrap";
+import Example from "./Example";
 
-export default function App(): JSX.Element {
+function App() {
   return (
-    <div className={styles.container}>
-      <h1>App Component</h1>
-      <p>Hello world!</p>
+    <div>
+      <h1>App</h1>
+      <Example />
     </div>
   );
 }
+
+export default App;

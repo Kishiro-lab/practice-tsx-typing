@@ -1,13 +1,12 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+/* make the customizations */
+$primary: #0074d9;
+$danger: #ff4136;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+$theme-colors: (
+  "primary": $primary,
+  "secondary": tomato,
+  "danger": $danger,
+  "success": purple,
+);
 
-* {
-  box-sizing: border-box;
-}
+@import "~bootstrap/scss/bootstrap";
