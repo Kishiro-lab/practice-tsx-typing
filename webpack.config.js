@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 // [定数] webpack の出力オプションを指定します
 // 'production' か 'development' を指定
 const MODE = "production";
@@ -101,6 +102,7 @@ module.exports = {
       // ファイル名を設定します
       filename: "style.css",
     }),
+    new BundleAnalyzerPlugin(),
   ],
   performance: {
     hints: false,
